@@ -114,7 +114,7 @@ class ImgCanvas(tk.Canvas):
         #TODO: un-hardcode this
         if shape == (480,640):
             shape = (240,320)
-            pimg = pimg.resize(shape[::-1], Image.ANTIALIAS)
+            pimg = pimg.resize(shape[::-1], Image.LANCZOS)
 
         self.photo = ImageTk.PhotoImage(image=pimg)
         if self.cvs_im is None:
